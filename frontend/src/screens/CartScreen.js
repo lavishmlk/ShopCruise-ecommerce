@@ -46,7 +46,7 @@ const CartScreen = ({ match, location, history }) => {
 
   // iska matlab agar login nhi hai to kogin page pe bhejdo nhi to shipping page pe redirect kardo
   const checkoutHandler = () => {
-    history.push('/login?redirect==shipping');
+    history.push('/login?redirect=shipping');
   };
 
   return (

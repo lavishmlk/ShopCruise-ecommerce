@@ -17,7 +17,13 @@ import {
   productDetailsReducer,
 } from './reducers/productReducers';
 import { cartReducer } from './reducers/cartReducers';
-import { userLoginReducer } from './reducers/userReducers.js';
+import {
+  userDetailsReducer,
+  userLoginReducer,
+  userRegisterReducer,
+  userUpdateProfileReducer,
+} from './reducers/userReducers.js';
+import { orderCreateReducer } from './reducers/orderReducers.js';
 
 const reducer = combineReducers({
   // ye hi humari states hoti hai
@@ -26,8 +32,13 @@ const reducer = combineReducers({
   productDetails: productDetailsReducer,
   cart: cartReducer,
   userLogin: userLoginReducer,
+  userRegister: userRegisterReducer,
+  userDetails: userDetailsReducer,
+  userUpdateProfile: userUpdateProfileReducer,
+  orderCreate: orderCreateReducer,
 });
 
+//initial state humari local storage se aa rhi hai jo humne actions me daal rakhi hai
 const cartItemsFromStorage = localStorage.getItem('cartItems')
   ? JSON.parse(localStorage.getItem('cartItems'))
   : [];
@@ -36,9 +47,17 @@ const userInfoFromStorage = localStorage.getItem('userInfo')
   ? JSON.parse(localStorage.getItem('userInfo'))
   : null;
 
+const shippingAddressFromStorage = localStorage.getItem('shippingAddress')
+  ? JSON.parse(localStorage.getItem('shippingAddress'))
+  : {};
+
 const initialState = {
+  //load hote hi ye initial state dikhegi jo bhi local storage me already stored hoga
   // redux state me data saved hi rahega aur react devtools khol ke dekhega to state me wo data hamesha dikhega kyunki local storage se le rahe hai local storage brower me hoti browser save karke rakhta hai chahe browser close bhi kardo tab bhi
-  cart: { cartItems: cartItemsFromStorage },
+  cart: {
+    cartItems: cartItemsFromStorage,
+    shippingAddress: shippingAddressFromStorage,
+  },
   userLogin: { userInfo: userInfoFromStorage },
 };
 

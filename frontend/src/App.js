@@ -11,6 +11,11 @@ import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
+import RegisterScreen from './screens/RegisterScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import ShippingScreen from './screens/ShippingScreen';
+import PaymentScreen from './screens/PaymentScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
 // JUST REMEMBER JAB BHI KISI ELEMENT KA LIKE AIRPODS KA CODE DEKHNA HO TO CONSOLE ME JAA KE USS ELEMENT PE CLICK KAR DIA AUR COMPONENTS ME JAA KE REACT PROPS BHI DIKH JAENGE
 // :id jo likha hai wo isliye hai taaki productscreen wle page me match.params.id se acess kar sake id ki jagah kuch bhi likh sakte hai technical thapa video 57 use params
 
@@ -28,6 +33,11 @@ const App = () => {
           {/* id ke baad question mark ka matlab id is optional */}
           <Route path='/cart/:id?' component={CartScreen} />
           <Route path='/login' component={LoginScreen} />
+          <Route path='/register' component={RegisterScreen} />
+          <Route path='/profile' component={ProfileScreen} />
+          <Route path='/shipping' component={ShippingScreen} />
+          <Route path='/payment' component={PaymentScreen} />
+          <Route path='/placeorder' component={PlaceOrderScreen} />
         </Container>
       </main>
       <Footer />

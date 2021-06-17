@@ -34,6 +34,7 @@ userSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
+//iski wajah se saare passwords automatically encryt ho jaenge
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) {
     next();

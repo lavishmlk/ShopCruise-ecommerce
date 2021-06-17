@@ -12,6 +12,7 @@ import connectDB from './config/db.js';
 import productRoutes from './routes/productRoutes.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import userRoutes from './routes/userRoutes.js';
+import orderRoutes from './routes/orderRoutes.js';
 
 connectDB();
 
@@ -31,6 +32,7 @@ app.get('/', (req, res) => {
 //it means anything that will be linked to /api/products will be directed to productRoutes
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/orders', orderRoutes);
 
 //in video 9 of mongodb custom error handling ye app.use wla code
 app.use(notFound);

@@ -1,4 +1,4 @@
-// routes aur controller wli files apas me linked hai route wli file controller wli ko hi import karke data le rhi hai
+
 
 import Product from '../models/productModel.js';
 import asyncHandler from 'express-async-handler';

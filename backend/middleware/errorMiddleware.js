@@ -1,4 +1,4 @@
-//in video 9 of mongodb custom error handling ye app.use wla code
+
 
 const notFound = (req, res, next) => {
   const error = new Error(`not found-${req.originalUrl}`);

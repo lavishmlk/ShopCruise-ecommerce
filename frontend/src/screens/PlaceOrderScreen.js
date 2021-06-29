@@ -1,7 +1,4 @@
-// https://www.udemy.com/course/mern-ecommerce/learn/lecture/22495582#questions/14655054
-//WILL ne explain kiya hai toFixed kizarurat kyu nahi hai
 
-//watch checkout process part1 ka video 6 from 12:10 idea ho jaega orderscreen kaise chal rhi hai usme sab shoet me bata rakha hai
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -15,21 +12,14 @@ const PlaceOrderScreen = ({ history }) => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
 
-  //   ye if else wla part video me nhi tha par github pe tha
+ 
   if (!cart.shippingAddress.address) {
     history.push('/shipping');
   } else if (!cart.paymentMethod) {
     history.push('/payment');
   }
 
-  //   Calculate prices
-
-  // Why do we wrap the prices with Number?
-  // Because toFixed(2) convert number to a string.
-
-  //   const addDecimals = (num) => {
-  //     return (Math.round(num * 100) / 100).toFixed(2);
-  //   };
+ 
 
   //ye cart. jo kiya hai iska matlab ye nhi hai ki pehle se cart me hai ye hai ki hum cart me add kar rhe hai
   cart.itemsPrice = cart.cartItems.reduce(
@@ -73,7 +63,7 @@ const PlaceOrderScreen = ({ history }) => {
     <>
       <CheckoutSteps step1 step2 step3 step4 />
       <Row>
-        {/* //8 length ka column yahan bana diya ek side me 4 length ka column banenge wo niche dekh iss code ke baad bana rakha hai */}
+        
         <Col md={8}>
           <ListGroup variant='flush'>
             <ListGroup.Item>

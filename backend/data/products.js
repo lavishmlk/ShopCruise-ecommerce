@@ -1,6 +1,4 @@
-//_ID saari comment kardi kyunki database apne aap ek id assign kar deta hai
 
-//is page ka ab use nahi hai kyunki database me traner kar dia ye aur users.js wla data
 const products = [
   {
     // _id: '1',

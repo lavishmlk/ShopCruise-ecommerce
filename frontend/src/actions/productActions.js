@@ -1,4 +1,4 @@
-//2 parts hai-action se products ko reducer ke through state me fire off karte hai fir //useSelector se grab karte hai data ya matlab pull out karte hai hume kya chahiye and //display it in our output
+
 
 import axios from 'axios';
 import {

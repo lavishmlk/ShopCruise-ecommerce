@@ -1,7 +1,4 @@
-// userController me new user create karne ke liye .create use kiya tha aur yahan pehle new use kar rhe hai fir .save()
-// The difference between the two is that .create() both instantiates a new mongoose schema object and saves it.
 
-// In this case, Brad decided to do these two steps separately.  He first created a new order, calling it "order".  Afterwards, he put the saved order in createdOrder.
 
 import asyncHandler from 'express-async-handler';
 import Order from '../models/orderModel.js';
